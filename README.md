@@ -12,10 +12,12 @@ Project Emotavia was born from the realization that emotional challenges do not 
 
 * **AI Emotional Consultant ("Emo AI"):** Integrates OpenAI's GPT-4o-mini to guide users through reflective questions, analyzing their responses to provide structured, empathetic, and actionable mental health advice.
 * **Intelligent Mood Detection:** Features a dual-path mood tracking system. Users can either manually select from categorized emotions or let the AI analyze their multi-step textual reflections to accurately define their current mood.
-* **Tailored Peer Support:** Automatically matches users with peer supporters based on their registered gender, language preference, and dynamically detected mood to ensure highly relevant and comfortable interactions (Feature coming soon in future).
+* **Tailored Peer Support:** Automatically matches users with peer supporters based on their registered gender, language preference, and dynamically detected mood to ensure highly relevant and comfortable interactions.
 * **Automated Daily Check-Ins:** Utilizes a background scheduler to automatically send personalized morning check-in emails, encouraging users to track their emotional state proactively.
 * **Emotavia Circles:** Offers dedicated support communities (like Parenting Circles, Youth Circles, and Teacher Circles) to foster emotional literacy and resilience among specific demographics.
-* **Secure User Authentication:** A robust user registration and login system utilizing session management and MySQL data storage. 
+* **Secure User Authentication:** A robust user registration and login system utilizing session management and MySQL data storage.
+
+_Note: Features like Peer Support and initiatives like Community Circles will be included during the real-time full deployment of application._
 
 ## 🛠️ Technologies
 
