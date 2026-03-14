@@ -21,7 +21,7 @@ _Note: Features like Peer Support and initiatives like Community Circles will be
 
 ## 🛠️ Technologies
 
-* **Frontend:** HTML, CSS, JavaScript (Jinja2 Templates), Formspree (Contact Forms)
+* **Frontend / GUI:** HTML, CSS, JavaScript (Jinja2 Templates), Formspree (Contact Forms)
 * **Backend:** Python, Flask
 * **AI Integration:** OpenAI API (GPT-4o-mini)
 * **Database:** MySQL
@@ -33,11 +33,11 @@ _Note: Features like Peer Support and initiatives like Community Circles will be
 To run this project locally, ensure that you have the following installed and configured on your machine:
 
 * Python 3.x
+* Jetbrains PyCharm (or your preferred Python IDE)
 * MySQL Database Server & MySQL Workbench
-* MySQL Connector for Python (`mysql-connector-python`)
+* MySQL Connector JAR file (to connect the application to the database)
 * Flask and required dependencies (`flask`, `openai`, `python-dotenv`, `apscheduler`)
-* An active OpenAI API Key
-* A `.env` file containing your database credentials, SMTP email details, and Flask secret key.
+* An active OpenAI API Key and SMTP Passcode.
 
 ## 🪧 Project Demonstration
 
