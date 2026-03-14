@@ -39,7 +39,7 @@ To run this project locally, ensure that you have the following installed and co
 * Flask and required dependencies (`flask`, `openai`, `python-dotenv`, `apscheduler`)
 * An active OpenAI API Key and SMTP Passcode.
 
-## 🪧 Project Demonstration
+## 🎥 Project Demonstration
 
 Click to watch the demo!
 <div align="center">
