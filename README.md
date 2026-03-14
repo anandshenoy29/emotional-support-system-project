@@ -38,7 +38,7 @@ To run this project locally, ensure that you have the following installed and co
 
 ## 🪧 Project Demonstration
 <div align="center">
-  <a href="https://docs.google.com/videos/d/1qcbJPGuV_kUQ_NhmPRUBmTrByQhS9pVH1Icu7CEDtY4/edit?usp=drive_link">
+  <a href="https://docs.google.com/videos/d/1mI3me8E2V2IRBOlHUXxHf1hxezMOpSr6FSIxaja0Nw0/edit?usp=drive_link">
     <img src="static/elogo.png" alt="Click to Watch" style="width:100%;">
   </a>
 </div>
