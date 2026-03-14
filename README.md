@@ -1,6 +1,7 @@
 # 🧠 Emotavia - Emotional Support System
 
 A web-based emotional wellness application designed to provide a stigma-free environment where individuals can safely express their emotions, understand their feelings, and receive actionable mental health support. It features AI-driven mood analysis, automated daily check-ins, and community-driven peer support.   
+
 This is a MVP web application developed for BAMMC student who showcased the project at the University of Mumbai's Aavishkar Inter-Collegiate Research Convention 2025-26.
 
 ## 📖 Overview
