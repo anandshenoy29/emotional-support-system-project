@@ -44,6 +44,6 @@ To run this project locally, ensure that you have the following installed and co
 Click to watch the demo!
 <div align="center">
   <a href="https://docs.google.com/videos/d/1mI3me8E2V2IRBOlHUXxHf1hxezMOpSr6FSIxaja0Nw0/edit?usp=drive_link">
-    <img src="static/emotavia-demo.png" alt="Click to Watch" style="width:100%;">
+    <img src="static/demo.png" alt="Click to Watch" style="width:100%;">
   </a>
 </div>
