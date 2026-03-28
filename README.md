@@ -6,7 +6,7 @@ This is an MVP web application developed for BAMMC student who showcased the pro
 
 ## 📖 Overview
 
-Project Emotavia was born from the realization that emotional challenges do not discriminate, yet many people struggle silently due to a lack of accessible, judgment-free support. The platform bridges this gap by acting as an intelligent, 24/7 emotional companion. Users can check their mood manually or interact with an AI consultant ("Emo AI") that analyzes their recent experiences to provide tailored, empathetic advice and accurately summarize their mental state. The system also bridges the gap to human connection through demographic-matched peer support.
+Emotavia was born from the realization that emotional challenges do not discriminate, yet many people struggle silently due to a lack of accessible, judgment-free support. The platform bridges this gap by acting as an intelligent, 24/7 emotional companion. Users can check their mood manually or interact with an AI consultant ("Emo AI") that analyzes their recent experiences to provide tailored, empathetic advice and accurately summarize their mental state. The system also bridges the gap to human connection through demographic-matched peer support.
 
 ## ✨ Key Features
 
