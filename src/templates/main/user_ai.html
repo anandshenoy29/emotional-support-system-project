@@ -1,0 +1,111 @@
+{% extends "user_base.html" %}
+{% block content %}
+
+<section class="hero-user-ai">
+    <h1>Hello, I'm Emo AI!<br>
+    How are you feeling right now?</h1>
+</section>
+
+<div class="chat-container">
+    <h3>🧐 Tell me what happened in the last 12 or 24 hours?</h3>
+    <div id="chat-box" class="chat-box"></div>
+    <form id="chat-form" method="POST">
+        <input type="text" id="user-input" placeholder="Type your message here..." required>
+        <button type="submit" id="send-1">Send</button>
+    </form>
+</div>
+
+<div class="chat-container">
+    <h3>🤔 What is the biggest thought in your mind right now?</h3>
+    <div id="chat-box-2" class="chat-box"></div>
+    <form id="chat-form-2" method="POST">
+        <input type="text" id="user-input-2" placeholder="Type your message here..." required disabled>
+        <button type="submit" id="send-2" disabled>Send</button>
+    </form>
+</div>
+
+<div class="chat-container">
+    <h3>😕 What is your body feeling right now?</h3>
+    <div id="chat-box-3" class="chat-box"></div>
+    <form id="chat-form-3" method="POST">
+        <input type="text" id="user-input-3" placeholder="Type your message here..." required disabled>
+        <button type="submit" id="send-3" disabled>Send</button>
+    </form>
+</div>
+
+<div style="text-align: center; margin-top: 10px;">
+    <button id="final-mood-btn" class="final-mood-main-btn" style="display:none;">
+        Proceed
+    </button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    let q1_text = "";
+    let q2_text = "";
+
+    $(document).ready(function () {
+        $('#chat-form').on('submit', function (e) {
+            e.preventDefault();
+            let userInput = $('#user-input').val();
+            q1_text = userInput;
+
+            $('#user-input').val('');
+            $('#user-input').prop('disabled', true);
+            $('#send-1').prop('disabled', true);
+            $('#chat-box').append('<div class="user-message"><b>You: </b>' + userInput + '</div>');
+
+            $.post('/ask', { message: userInput }, function (data) {
+                $('#chat-box').append('<div class="ai-message"><b>AI: </b>' + data.response + '</div>');
+                $('#chat-box').scrollTop($('#chat-box').scrollHeight);
+                $('#user-input-2').prop('disabled', false);
+                $('#send-2').prop('disabled', false);
+            });
+        });
+
+        $('#chat-form-2').on('submit', function (e) {
+            e.preventDefault();
+            let userInput = $('#user-input-2').val();
+            q2_text = userInput;
+
+            $('#user-input-2').val('');
+            $('#user-input-2').prop('disabled', true);
+            $('#send-2').prop('disabled', true);
+            $('#chat-box-2').append('<div class="user-message"><b>You: </b>' + userInput + '</div>');
+
+            $.post('/ask2', { message: userInput }, function (data) {
+                $('#chat-box-2').append('<div class="ai-message"><b>AI: </b>' + data.response + '</div>');
+                $('#chat-box-2').scrollTop($('#chat-box-2').scrollHeight);
+                $('#user-input-3').prop('disabled', false);
+                $('#send-3').prop('disabled', false);
+            });
+        });
+
+        $('#chat-form-3').on('submit', function (e) {
+            e.preventDefault();
+            let userInput = $('#user-input-3').val();
+
+            $('#user-input-3').val('');
+            $('#user-input-3').prop('disabled', true);
+            $('#send-3').prop('disabled', true);
+            $('#chat-box-3').append('<div class="user-message"><b>You: </b>' + userInput + '</div>');
+
+            $.post('/ask3', { message: userInput }, function (data) {
+                $('#chat-box-3').append('<div class="ai-message"><b>AI: </b>' + data.response + '</div>');
+                $('#chat-box-3').scrollTop($('#chat-box-3').scrollHeight);
+                
+                $.post('/mood_summary', { q1: q1_text, q2: q2_text, q3: userInput }, function (summaryData) {
+                    sessionStorage.setItem("detectedMood", summaryData.mood);
+                    $("#final-mood-btn").show();
+                });
+            });
+        });
+
+        $("#final-mood-btn").on("click", function () {
+            let mood = sessionStorage.getItem("detectedMood");
+            window.location.href = "/peer_support?category=" + encodeURIComponent(mood);
+        });
+    });
+</script>
+
+{% endblock %}
